@@ -1,0 +1,119 @@
+*::before,
+*::after,
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey--700: hsl(0, 0%, 20%);
+    --grey--800: hsl(0, 0%, 12%);
+    --grey-900: hsl(0, 0%, 8%);
+
+
+    --font-sm: clamp(12px, 1vw, 16px);
+    --font-md: clamp(12px, 2vw, 16px);
+    --font--lg: clamp(24px, 2.5vw, 26px)
+}
+
+html{
+    height: 100vh;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    background-color: var(--grey-900);
+
+    font-family: "Figtree", sans-serif;
+    text-align: center;
+    color: var(--white);
+    font-size: var(--font-sm);
+    line-height: 1.5;
+
+}
+
+.container{
+    width: min(400px, 80vw);
+}
+
+.card{
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+
+    background-color: var(--grey--800);
+    border-radius: 20px;
+
+    padding: 40px;
+}
+
+.card-img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.card-name{
+    font-size: var(--font--lg);
+}
+
+.card-location{
+    color: var(--green);
+}
+
+.card-location, .card-profession{
+    font-size: var(--font-sm);
+}
+
+.card-links{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+.card-link{
+    nav-index: 0;
+    width: 100%;
+
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 700;
+    font-size: var(--font-md);
+
+    background-color: var(--grey--700);
+    border-radius: 10px;
+    padding: 15px 10px;
+}
+
+.card-link:hover, .card-link:focus{
+    color: var(--grey-900);
+    background-color: var(--green);
+}
+
+.attribution a:hover, .attribution a:focus{
+    color: var(--green);
+}
+
+
+@media (max-width: 400px) {
+    .card-link{
+        padding: 10px;
+    }
+
+    .card{
+        padding: 20px;
+    }
+}
